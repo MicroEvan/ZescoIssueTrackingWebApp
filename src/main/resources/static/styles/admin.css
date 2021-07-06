@@ -1,0 +1,45 @@
+.side-nav-option {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+div .col-md-10 .image-logo {
+  display: block;
+  margin: auto;
+  width: 100px;
+  background-color: rebeccapurple;
+}
+.welcome-text {
+  padding: 50px;
+  color: #000b1b;
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  background-color: lightblue;
+  border: 1px solid #000b1b;
+}
+.disappear {
+  display: none;
+}
+.credentials {
+  padding: 10px;
+  color: #000b1b;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+@media screen and (max-width: 600px) {
+}
