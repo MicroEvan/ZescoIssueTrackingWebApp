@@ -110,7 +110,7 @@ function changeView(id) {
   viewToShow = views.filter((item) => item.id === id.split("View")[0])[0];
 
   if (user === null && viewToShow.id !== "about" && viewToShow.id !== "welcome") {
-    window.alert("log in first")
+    window.location="login.html"
   }
   else if (viewToShow.id === "about" || viewToShow.id === "welcome") {
 
