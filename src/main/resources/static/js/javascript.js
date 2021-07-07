@@ -163,7 +163,8 @@ function addEquip() {
           var rows = "";
 
 
-          rows += `<tr><td>` + info.id + `</td><td>` + info.name + `</td><td>` + info.description + `</td><td id=${info.id} onClick="deleteEquip(this.id)" style="color:red;text-decoration:underline;">` + "delete" + `</td></tr>`;
+          rows += `<tr><td>` + info.id + `</td><td>` + info.name + `</td><td>` + info.description + `</td><td id=${info.id} onClick="deleteEquip(this.id)" style="color:red;text-decoration:underline;
+  cursor: pointer;">` + "delete" + `</td></tr>`;
           $(rows).appendTo("#equipmentList tbody");
         });
     })
@@ -214,7 +215,9 @@ function addIssue() {
         .then((response) => {
           window.alert(response[0]);
           var rows = ""
-          rows += `<tr ><td> ` + info.id + `</td><td>` + equipmentName + `</td><td>` + info.description + `</td><td>` + info.location + `</td><td>` + info.status + `<p style="font-size:16px;padding:5px;display:inline-block; text-decoration:underline;color:green;" id=${info.id} onClick="logStuff()" data-bs-toggle="modal" data-bs-target="#issueModal">Edit</p>` + `</td><td>` + info.date + `</td><td id=${info.id} onClick="deleteIssue(this.id)" style="color:red;text-decoration:underline;"> ` + "delete" + `</td></tr>`;
+          rows += `<tr ><td> ` + info.id + `</td><td>` + equipmentName + `</td><td>` + info.description + `</td><td>` + info.location + `</td><td>` + info.status + `<p style="font-size:16px;padding:5px;display:inline-block; text-decoration:underline;
+  cursor: pointer;color:green;" id=${info.id} onClick="logStuff()" data-bs-toggle="modal" data-bs-target="#issueModal">Edit</p>` + `</td><td>` + info.date + `</td><td id=${info.id} onClick="deleteIssue(this.id)" style="color:red;text-decoration:underline;
+  cursor: pointer;"> ` + "delete" + `</td></tr>`;
 
 
           $(rows).appendTo("#issueList tbody");
@@ -254,7 +257,8 @@ function getEquips() {
       var rows = "";
       $.each(data, function () {
 
-        rows += `<tr><td>` + this.id + `</td><td>` + this.name + `</td><td>` + this.description + `</td><td id=${this.id} onClick="deleteEquip(this.id)" style="color:red;text-decoration:underline;">` + "delete" + `</td></tr>`;
+        rows += `<tr><td>` + this.id + `</td><td>` + this.name + `</td><td>` + this.description + `</td><td id=${this.id} onClick="deleteEquip(this.id)" style="color:red;text-decoration:underline;
+  cursor: pointer;">` + "delete" + `</td></tr>`;
       });
 
       $(rows).appendTo("#equipmentList tbody");
@@ -283,7 +287,9 @@ function getIssues() {
             var equip = equipment.find(e => e.id === parseInt(this.equipmentId));
 
             var name = equip === undefined ? "unknwown" : equip.name;
-            rows += `<tr ><td> ` + this.id + `</td><td>` + name + `</td><td>` + this.description + `</td><td>` + this.location + `</td><td>` + this.status + `<p style="font-size:16px;padding:5px;display:inline-block; text-decoration:underline;color:green;" id=${this.id} onClick="logStuff()" data-bs-toggle="modal" data-bs-target="#issueModal">Edit</p>` + `</td><td>` + this.date + `</td><td id=${this.id} onClick="deleteIssue(this.id)" style="color:red;text-decoration:underline;"> ` + "delete" + `</td></tr>`;
+            rows += `<tr ><td> ` + this.id + `</td><td>` + name + `</td><td>` + this.description + `</td><td>` + this.location + `</td><td>` + this.status + `<p style="font-size:16px;padding:5px;display:inline-block; text-decoration:underline;
+  cursor: pointer;color:green;" id=${this.id} onClick="logStuff()" data-bs-toggle="modal" data-bs-target="#issueModal">Edit</p>` + `</td><td>` + this.date + `</td><td id=${this.id} onClick="deleteIssue(this.id)" style="color:red;text-decoration:underline;
+  cursor: pointer;"> ` + "delete" + `</td></tr>`;
 
 
           });
