@@ -30,18 +30,19 @@
 							<img src="./assets/images/zesco_logo.jpg" style="display: inline-block;" alt="" height="50">
 						</a>
 				
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-							aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-							<div class="navbar-nav">
-								<a class="nav-link active" aria-current="page" href="index.html">Home</a>
-								<a class="nav-link active" href="login.html">Login</a>
-								
-								<a class="nav-link active" href="register.html">Register</a>
-							</div>
-						</div>
+						
+						<li class="nav-item side-nav-option navbar-brand"   >
+							<i data-feather="user" style="color:black;"></i>
+							<i id="username" >No user found</i>
+						</li>
+						<li class="nav-item side-nav-option" id="login" onClick="goLogin()">
+							<i data-feather="log-in" style="color:green;"></i>
+							Login
+						</li>
+						<li class="nav-item side-nav-option" id="logout" onClick="logout()">
+							<i data-feather="log-out" style="color:red;"></i>
+							Logout
+						</li>
 					</div>
 				</nav>
 			</div>
@@ -52,7 +53,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2 "  style="padding-top: 40px; background-color: orange; color: white;">
-				<div>
+				<div >
 					<ul class="nav flex-column">
 					<li class="nav-item side-nav-option" id="welcomeView" onClick="changeView(this.id)">
 						<i data-feather="home"  style="color:black;"></i>
@@ -69,10 +70,6 @@
 					<li class="nav-item side-nav-option" id="aboutView" onClick="changeView(this.id)">
 						<i data-feather="info" style="color:black;"></i>
 						About
-					</li>
-					<li class="nav-item side-nav-option" id="logout" onClick="logout()">
-						<i data-feather="log-out" style="color:red;" ></i>
-						Logout
 					</li>
 				</ul>
 				</div>

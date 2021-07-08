@@ -49,6 +49,10 @@ function logout() {
   localStorage.removeItem("user")
   window.location.reload();
 }
+function goLogin() {
+  
+  window.location="login.html"
+}
 function registerUser() {
   var parsedPassword = [];
 
@@ -93,7 +97,7 @@ function registerUser() {
   }).then(data => data.json())
     .then((response) => {
 
-      window.alert(response[0])
+      
       if (response[0] === "User record created successfully.") {
         localStorage.setItem("user", JSON.stringify(info2));
 
@@ -243,10 +247,18 @@ function getEquips() {
 
 
   var logout = document.getElementById('logout')
+  var login = document.getElementById('login')
+  var username = document.getElementById('username')
   var user = JSON.parse(localStorage.getItem("user"));
 
   if (user === null) {
     logout.className = "d-none"
+    username.innerHTML="No user found"
+  }
+  else{
+    login.className="d-none"
+    
+    username.innerHTML=` <i data-feather="user" style="color:black;"></i>  Welcome, ${user.name}`
   }
   fetch("https://zesco-issue-tracker.herokuapp.com/equips/read")
     .then(response => response.json())
