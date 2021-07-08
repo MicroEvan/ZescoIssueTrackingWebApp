@@ -18,6 +18,24 @@ div .col-md-10 .image-logo {
   background-color: lightblue;
   border: 1px solid #000b1b;
 }
+.error-text {
+  padding: 5px;
+  color: red;
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: #dddd;
+  text-align: center;
+  border: 1px solid #000b1b;
+}
+.ok-text {
+  padding: 5px;
+  color: green;
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: #dddd;
+  text-align: center;
+  border: 1px solid #000b1b;
+}
 .disappear {
   display: none;
 }

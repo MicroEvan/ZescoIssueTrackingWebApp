@@ -4,6 +4,8 @@ function login() {
   var password = "";
   var name = "user"
   var userPassword = document.getElementById('userPassword').value
+  
+  var feeback = document.getElementById('login-feedback')
   var email = document.getElementById('userEmail').value
   var roleId = "1"
   var password = userPassword.toString().substring(0, 4);
@@ -34,7 +36,9 @@ function login() {
 
       }
       else {
-        window.alert(data[0].name)
+        
+       feeback.innerText=data[0].name
+       feeback.className="error-text"
 
       }
     })
