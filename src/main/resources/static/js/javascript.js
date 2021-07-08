@@ -90,7 +90,7 @@ function registerUser() {
     .then((response) => {
 
       window.alert(response[0])
-      if (response[0] === "Student record created successfully.") {
+      if (response[0] === "User record created successfully.") {
         localStorage.setItem("user", JSON.stringify(info2));
 
         window.location = "index.html"
