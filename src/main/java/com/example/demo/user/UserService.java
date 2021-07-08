@@ -35,9 +35,9 @@ public class UserService {
                 }
                 user.setPassword(password);
                 userRepository.save(user);
-                return  List.of("Student record created successfully.");
+                return  List.of("User record created successfully.");
             }else {
-                return List.of("Student already exists in the database.");
+                return List.of("User already exists in the database.");
             }
         }catch (Exception e){
             throw e;
@@ -103,13 +103,13 @@ public class UserService {
                     userToBeUpdate.setEmail(user.getEmail());
                     userRepository.save(userToBeUpdate);
                 });
-                return List.of("Student record updated.");
+                return List.of("User record updated.");
 
             }catch (Exception e){
                 throw e;
             }
         }else {
-            return List.of("Student does not exists in the database.");
+            return List.of("User does not exists in the database.");
         }
     }
 
@@ -121,13 +121,13 @@ public class UserService {
                 users.stream().forEach(s -> {
                     userRepository.delete(s);
                 });
-                return List.of("Student record deleted successfully.");
+                return List.of("User record deleted successfully.");
             }catch (Exception e){
                 throw e;
             }
 
         }else {
-            return List.of("Student does not exist");
+            return List.of("User does not exist");
         }
     }
 }
