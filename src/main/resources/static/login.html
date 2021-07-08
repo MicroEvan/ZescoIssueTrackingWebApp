@@ -55,7 +55,6 @@
         Login
       </div>
       <div class="card-body">
-        <form onsubmit="login()" action="#">
           
           
           <div class="mb-3">
@@ -67,11 +66,10 @@
             <input style="border-color:green" type="number" class="form-control" id="userPassword" placeholder="Enter 4 digit pin" required>
           </div>
 
-          <button type="submit" class="btn btn-success mb-3"
-            onClick="(event)=>{event.preventDefault()}">Login</button>
-            <button type="button" class="btn btn-success mb-3"><a href="register.html" style="color: #fff;text-decoration: none;" >Register</a></button>
+          <p  class="btn btn-success mb-3"
+            onClick="login()">Login</p>
+            <p  class="btn btn-success mb-3"><a href="register.html" style="color: #fff;text-decoration: none;" >Register</a></p>
            
-        </form>
       </div>
     </div>
 
