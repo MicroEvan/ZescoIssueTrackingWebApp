@@ -402,7 +402,7 @@ function updateIssue() {
 
   var role = JSON.parse(localStorage.getItem("user"));
 
-  if (role.id !== '1') {
+  if (role.roleId !== '1') {
     window.alert("Only Supervisor can provide feedback.Please log in as superviser")
   }
   else {
