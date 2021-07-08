@@ -56,6 +56,7 @@ function goLogin() {
 function registerUser() {
   var parsedPassword = [];
 
+  var feeback = document.getElementById('register-feedback')
   var password = "";
   var name = document.getElementById('userName').value
   var userPassword = document.getElementById('userPassword').value
@@ -97,7 +98,14 @@ function registerUser() {
   }).then(data => data.json())
     .then((response) => {
 
-      
+      if(parseInt(response.status) === 500){
+        feeback.innerHTML="Fill in all fields"
+        feeback.className="error-text"
+      }
+      if (response[0] === "User already exists in the database.") {
+        feeback.innerHTML=`${response[0]}`
+        feeback.className="error-text"
+      }
       if (response[0] === "User record created successfully.") {
         localStorage.setItem("user", JSON.stringify(info2));
 
