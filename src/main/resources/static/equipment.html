@@ -114,49 +114,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div id="issue" class="disappear">
-                    <form onsubmit="addIssue()" action="#" onreset="cancelIssuePost()">
-                        <label class="form-label"
-                            style="display: block;margin-top: 50px;line-height: 1px; margin-bottom: 0;padding-bottom: 0;">Equipment</label>
-                        <select class="form-select form-select-lg mb-3" id="equipmentSelect"
-                            style="padding: 7px; margin-top: 20px;width: 50%;" aria-label=".form-select-lg example">
-
-                        </select>
-                        <div class="mb-3">
-                            <label for="issueDesc" class="form-label">Description</label>
-                            <textarea class="form-control" id="issueDesc" rows="3"
-                                placeholder="Enter issue description here..." required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="issueLocation" class="form-label">Location</label>
-                            <input type="text" class="form-control" id="issueLocation" placeholder="Enter Location..."
-                                required>
-                        </div>
-
-                        <button type="submit" class="btn btn-success mb-3"
-                            onClick="(event)=>{event.preventDefault()}">Save</button>
-                        <button type="reset" class="btn btn-danger mb-3"
-                            onClick="(event)=>{event.preventDefault()}">Cancel</button>
-
-                    </form>
-                    <h2>Available Issues</h2>
-
-                    <table id="issueList">
-                        <thead>
-                            <tr id="100">
-                                <td>ID</td>
-                                <td>Equipment</td>
-                                <td>Description</td>
-                                <td>Location</td>
-                                <td>Status</td>
-                                <td>Date</td>
-                                <td>More</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
+                
                 <div id="about" class="disappear">
 
                     <div class="card" style="width: 18rem;">
