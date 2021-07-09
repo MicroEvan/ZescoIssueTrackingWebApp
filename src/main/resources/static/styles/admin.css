@@ -48,7 +48,9 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-
+#welcome .image-logo {
+  margin-top: 50px;
+}
 td,
 th {
   border: 1px solid #dddddd;
