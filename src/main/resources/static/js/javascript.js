@@ -47,7 +47,16 @@ function login() {
 }
 function logout() {
   localStorage.removeItem("user")
-  window.location.reload();
+  window.location.reload()
+}
+function isLoggedIn(){
+  
+  var user = JSON.parse(localStorage.getItem("user"));
+
+  if(user== null){
+    
+  window.location="login.html"
+  }
 }
 function goLogin() {
   
@@ -138,6 +147,21 @@ function changeView(id) {
     viewToShow.className = ""
   }
 }
+
+function goToPage(id){
+  
+  var page=id.split("View")[0];
+  var user = JSON.parse(localStorage.getItem("user"))
+
+  if(user === null){
+    window.location="login.html"
+  }
+  else{
+    
+  window.location=`${page}.html`;
+  }
+}
+
 function addEquip() {
 
   var description = document.getElementById('equipmentDesc').value;
@@ -249,6 +273,22 @@ function addIssue() {
 function cancelIssuePost() {
 
   console.log("reset form")
+  
+  var description = document.getElementById('issueDesc').value="";
+
+  var location = document.getElementById('issueLocation').value="";
+  var selects = document.getElementById('equipmentSelect').value="0";
+
+
+}
+function cancelEquipPost() {
+
+  console.log("reset form")
+  
+ 
+  var description = document.getElementById('equipmentDesc').value="";
+
+  var name = document.getElementById('equipmentName').value="";
 
 }
 function getEquips() {
