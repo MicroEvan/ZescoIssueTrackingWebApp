@@ -301,7 +301,7 @@ function getEquips() {
 
   if (user === null) {
     logout.className = "d-none"
-    username.innerHTML="No user found"
+    username.innerHTML="Log in to start"
   }
   else{
     login.className="d-none"
